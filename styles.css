@@ -13,16 +13,14 @@
 }
 
 body {
+  font-family: "Inconsolata";
   margin: 0;
+  padding: 0 30px;
 }
 
 img {
   display: block;
   width: 100%;
-}
-
-.main {
-  padding: 20px;
 }
 
 .header-last {
@@ -35,6 +33,10 @@ img {
   margin: 10px 0;
   color: #454546;
   font-family: "Poppins";
+}
+
+.main-title {
+  margin: 35px 0;
 }
 
 .main-nav {
@@ -116,7 +118,7 @@ img {
   width: 40px;
   height: 40px;
   background: rgba(255, 255, 255, 0.7);
-  top: 43%;
+  top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
   text-align: center;
@@ -161,7 +163,7 @@ img {
   margin: 5px 0;
 }
 
-.slider__link {
+.btn__shop {
   display: block;
   border: 1px solid #FF4E00;
   padding: 10px;
@@ -177,14 +179,141 @@ img {
 .container-products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 15px;
 }
 
 .product {
   border: 1px solid #ccc;
   padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.product:before {
+  content: "New";
+  background: #dd4909;
+  padding: 9px 27px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: rotate(-90deg);
+  color: #fff;
+  font-weight: bold;
+}
+
+.product__img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
 }
 
 .product__title {
   text-align: center;
+}
+
+.product__price {
+  color: #FF4E00;
+}
+
+.product__icon {
+  margin-top: 10px;
+  display: block;
+}
+
+.container-editor {
+  margin-top: 20px;
+}
+
+.editor__item {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.editor__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.editor__circle {
+  width: 250px;
+  height: 250px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -300px;
+  right: -100px;
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 70px;
+  padding-right: 50px;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.editor__item:hover .editor__circle{
+  transform: scale(1.2);
+  bottom: -120px;
+  right: -30px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.editor__item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.editor__item:hover:before {
+  opacity: 1;
+}
+
+/* Testimonial */
+
+.container__testimonials {
+  text-align: center;
+  background: #f7f7f7;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.testimonial__txt {
+  color: #777;
+}
+
+/* Topic */
+
+.container-topic {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.btn__black {
+  color: #333;
+}
+
+.topic i {
+  font-size: 1.5em;
+  color: #333;
+  padding: 20px 0;
+}
+
+/* Footer */
+
+.main-footer {
+  background: #151515;
+  color: #fff;
+  padding: 30px 20px;
 }
