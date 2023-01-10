@@ -41,3 +41,12 @@ btnLeft.addEventListener('click', function(){
 setInterval(function () {
   Next()
 }, 5000)
+
+/* Menu */
+
+let btnMenu = document.getElementById('btn-menu');
+let menu = document.querySelector('.menu')
+
+btnMenu.addEventListener('click', function() {
+  menu.classList.toggle('mostrar')
+});
