@@ -505,10 +505,19 @@ img {
 
   .main-header__txt{
     width: 100%;
+    padding: 0 10px;
   }
 
   .container__testimonials {
     padding: 20px;
     margin: 20px 0;
+  }
+
+  .container-products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .product__img {
+    height: 250px;
   }
 }
