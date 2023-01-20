@@ -36,6 +36,11 @@ img {
 
 .main-title {
   margin: 35px 10px;
+  text-align: center;
+}
+
+.main-header__link {
+  color:#333;
 }
 
 .main-header .container {
@@ -54,6 +59,7 @@ img {
   display: block;
   padding: 10px 15px;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .main-header__btn {
@@ -93,7 +99,7 @@ img {
   visibility: visible;
 }
 .menu__item {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   width: 150px;
   margin: auto;
@@ -105,13 +111,6 @@ img {
   position: relative;
   display: block;
 }
-
-/* .main-nav {
-  /opacity: 0;
-  visibility: hidden;
-  position: relative;
-} */
-
 
 /* Slider */
 
@@ -211,6 +210,12 @@ img {
   text-align: center;
   width: 150px;
   margin: 10px auto;
+  transition: all 0.5s;
+}
+
+.btn__shop:hover {
+  background: #FF4E00;
+  color: white;
 }
 
 /* Product Styles */
@@ -258,6 +263,11 @@ img {
 .product__icon {
   margin-top: 10px;
   display: block;
+  transition: all 0.5s;
+}
+
+.product__icon:hover {
+  color:#FF4E00
 }
 
 .container-editor {
@@ -417,10 +427,88 @@ img {
 /* Desk */
 
 @media screen and (min-width: 1024px){
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
   .slider {
     height: 400px;
   }
   .editor__item{
     height: 350px;
+  }
+
+  .icon-menu{
+    display: none;
+  }
+
+  .main-header .container--flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-header__container{
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .main-header__title {
+    width: 100%;
+    font-size: 4em;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-header__link {
+    margin: 10px;
+  }
+
+  .main-header__container:nth-child(2){
+    order: -1;
+    width: 25%;
+  }
+
+  
+  .main-header__container:nth-child(3){
+    width: 25%;
+    padding: 0 20px;
+  }
+
+  .main-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu {
+    position: static;
+    width: 100;
+    display: flex;
+    background: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu__link {
+    color: #333;
+  }
+
+  .main-header__btn {
+    width: 130px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .main-header__input {
+    width: 80%;
+  }
+
+  .main-header__txt{
+    width: 100%;
+  }
+
+  .container__testimonials {
+    padding: 20px;
+    margin: 20px 0;
   }
 }
